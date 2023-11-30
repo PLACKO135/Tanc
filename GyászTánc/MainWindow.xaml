@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GyászTánc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="LightBlue">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -18,21 +18,40 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel>
             <Label Content="Férfiak" HorizontalAlignment="Center"/>
-            <ListBox />
+            <ListBox  Height="180px"  x:Name="lbferfi">
+                <ListBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFB5D0CE" Offset="0.27"/>
+                        <GradientStop Offset="1" Color="#FF11AFA4"/>
+                    </LinearGradientBrush>
+                </ListBox.Background>
+            </ListBox>
 
         </StackPanel>
         <StackPanel Grid.Column="2">
             <Label Content="Nők" HorizontalAlignment="Center"/>
-            <ListBox/>
+            <ListBox Height="180px" x:Name="lbno">
+                <ListBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFB5D0CE" Offset="0.27"/>
+                        <GradientStop Offset="1" Color="#FF11AFA4"/>
+                    </LinearGradientBrush>
+                </ListBox.Background>
+            </ListBox>
         </StackPanel>
-        <TextBox Grid.Row="1"/>
-        <TextBox Grid.Row="1" Grid.Column="2"/>
+        <TextBox Grid.Row="2" x:Name="txtferfi" KeyDown="txtferfi_KeyDown"/>
+        <TextBox Grid.Row="2" Grid.Column="2" x:Name="txtno" KeyDown="txtno_KeyDown"/>
 
-        <Button Grid.Column="1" Grid.Row="2" Content="MIX"/>
-        <ListBox Grid.Column="1" Grid.Row="3" Grid.RowSpan="2"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="MIX" x:Name="btnmix" Click="btnmix_Click"/>
+        <ListBox Grid.Column="1" Grid.Row="4" Grid.RowSpan="2" x:Name="lberedmeny" Foreground="#FFFFA400" >
+            <ListBox.Background>
+                <ImageBrush ImageSource="/wallpaperflare.com_wallpaper.jpg"/>
+            </ListBox.Background>
+        </ListBox>
 
     </Grid>
 </Window>

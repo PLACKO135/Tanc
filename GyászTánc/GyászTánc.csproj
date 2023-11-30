@@ -7,4 +7,16 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="artworks-000598412762-99cykf-t500x500.jpg" />
+    <None Remove="CSS_remove_add.png" />
+    <None Remove="wallpaperflare.com_wallpaper.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="artworks-000598412762-99cykf-t500x500.jpg" />
+    <Resource Include="CSS_remove_add.png" />
+    <Resource Include="wallpaperflare.com_wallpaper.jpg" />
+  </ItemGroup>
+
 </Project>
